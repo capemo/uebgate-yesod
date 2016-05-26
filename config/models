@@ -1,0 +1,26 @@
+Carpeta
+    nombreCarpeta Text
+    carpetaPadre CarpetaId Maybe
+    UniqueCarpeta carpetaPadre !force
+    deriving Show
+
+Calificacion
+    calificacion Int
+    comentario Text
+    archivoId ArchivoId Maybe
+    deriving Show
+    deriving Eq
+
+Categoria
+    nombreCategoria Text
+
+Archivo
+    nombreArchivo Text
+    extencion Text
+    tamano Text
+    estado Text
+    fechaSubida UTCTime
+    descripcion Text
+    carpetaContenedora CarpetaId Maybe
+    categoria CategoriaId Maybe
+    deriving Show

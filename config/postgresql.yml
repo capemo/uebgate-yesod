@@ -1,0 +1,24 @@
+Default: &defaults
+  user: ikyjwqqowsdyvt
+  password: ZxYQ8Djsd3dzhGJ6y80r_bHmJN
+  host: ec2-54-243-47-213.compute-1.amazonaws.com
+  port: 5432
+  database: d2a8196qccq0i2
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: uebgate_test
+  <<: *defaults
+
+Staging:
+  database: uebgate_staging
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: uebgate_production
+  poolsize: 100
+  <<: *defaults
